@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import './App.css';
-import Card from './Components/Card'
-import Form from './Components/Form'
-
+import React, { Component } from "react";
+import "./App.css";
+import Card from "./Containers/cardContainer";
+import Form from "./Components/Form";
 
 // Redux Persist takes your Redux state object and saves it to persisted storage.
 // Then on app launch it retrieves this persisted state and saves it back to redux.
@@ -10,8 +9,17 @@ import Form from './Components/Form'
 class App extends Component {
   render() {
     return (
-      <div className="">
-          <Form />
+      <div className="container">
+        <div className="col-lg-4 marginTop">
+          <div className="col-md-8">
+            <Form />
+          </div>
+        </div>
+        <div className=" col-lg-7 marginTop ">
+          <div className="col-lg-7 cards">
+            <Card />
+          </div>
+        </div>
       </div>
     );
   }
