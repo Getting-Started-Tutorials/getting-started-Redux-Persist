@@ -2,7 +2,7 @@
 
 import * as t from '../Constants';
 
-const cardReducer = (state = [], action) => {
+const CARD_LIST_REDUCER = (state = [], action) => {
 
  console.log('data',action.data);
   switch (action.type) {
@@ -16,4 +16,4 @@ const cardReducer = (state = [], action) => {
   }
 };
 
-export default cardReducer;
+export default CARD_LIST_REDUCER;

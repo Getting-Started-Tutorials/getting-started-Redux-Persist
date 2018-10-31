@@ -3,9 +3,9 @@
 
 
 import { combineReducers } from 'redux';
-import cardReducer from './Reducers';
+import CARD_LIST_REDUCER from './Reducers';
 import * as t from './Constants';
 
 export default combineReducers({
-	[t.CARD_REDUCER]  : cardReducer,
+	[t.CARD_LIST_REDUCER]  : CARD_LIST_REDUCER,
 });

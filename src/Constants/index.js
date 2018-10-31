@@ -1,3 +1,3 @@
 
 export const SAVE_USER    = 'SAVE_USER';
-export const CARD_REDUCER = 'CARD_REDUCER'
+export const CARD_LIST_REDUCER = 'CARD_LIST_REDUCER'

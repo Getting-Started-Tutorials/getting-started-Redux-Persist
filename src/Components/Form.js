@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../App.css";
-import Card from "./Card";
 
 class Form extends React.Component {
   constructor(props) {
@@ -11,14 +10,15 @@ class Form extends React.Component {
       title: "",
       text: ""
     };
-
     this.handleImageChange = this.handleImageChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("this", this.state);
+    const { state } = this
+    this.props.saveCard(state);
+    this.setState({ file: "", title: "", text: "", previewUrl: "http://s3.amazonaws.com/37assets/svn/765-default-avatar.png"})
   }
 
   handleImageChange(e) {
