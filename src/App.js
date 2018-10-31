@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Card from './Components/Card'
+import Form from './Components/Form'
 
 
 // Redux Persist takes your Redux state object and saves it to persisted storage.
@@ -8,8 +10,8 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-          <Card />
+      <div className="">
+          <Form />
       </div>
     );
   }
