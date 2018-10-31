@@ -10,16 +10,26 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import rootReducer from './rootReducer'
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import * as t from './Constants';
 
-// BLOG
+const persistConfig = {
+ key: 'root',
+ storage: storage,
+ stateReconciler: autoMergeLevel2,
+ blacklist: [],
+ whitelist: [t.CARD_LIST_REDUCER]
+};
 
-const store = createStore(
-  rootReducer
-);
+const persistreducer = persistReducer(persistConfig, rootReducer);
+const store = createStore(persistreducer);
+const persistor = persistStore(store);
 
 ReactDOM.render((
   <Provider store={store}>
+  	 <PersistGate persistor={persistor}>
       <App />
+     </PersistGate>
   </Provider>
 ), document.getElementById('root'));
 
