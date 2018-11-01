@@ -54,21 +54,17 @@ class Form extends React.Component {
         </div>
 
         <div className="marginTop">
-          <label htmlFor="text">Text:</label>
-          <input
-            type="text"
-            className="form-control"
-            value={text}
-            onChange={e => this.setState({ text: e.target.value })}
-          />
+          <label htmlFor="comment">Text:</label>
+          <textarea className="form-control" rows="3" value = { text } onChange={e => this.setState({ text: e.target.value })} ></textarea>
         </div>
+
 
         <div className="marginTop">
           <img
-            src={this.state.previewUrl}
-            className="rounded"
-            width="100px"
-            alt="Cinque Terre"
+            src = {this.state.previewUrl}
+            className = "rounded"
+            width = "100px"
+            alt = "Cinque Terre"
           />
         </div>
 
