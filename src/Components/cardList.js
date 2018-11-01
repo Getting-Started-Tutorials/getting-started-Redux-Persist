@@ -9,7 +9,7 @@ class CardList extends React.Component {
   render() {
     const { cardList } = this.props;
     return (
-      <div>
+       <div>
         {cardList.length > 0
           ? cardList.map(card => <Card key={shortid.generate()} {...card} />)
           : null}
