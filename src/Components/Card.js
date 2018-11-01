@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 const Card = ({ title, text, previewUrl }) => (
-  <div className="col-md-4">
-    <div className="card " style={{ width: "18rem" }}>
+  <div className="col-md-4" >
+    <div className="card " style={{ width: "18rem", "textAlign": "centre" }}>
       <img
         className="card-img-top img-responsive"
         src={previewUrl}
